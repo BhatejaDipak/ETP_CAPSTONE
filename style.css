@@ -1,0 +1,110 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header, footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+}
+
+header h1, footer p {
+	margin: 0;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+li {
+	flex-basis: 30%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+li img {
+	max-width: 100%;
+}
+
+h3, p {
+	margin: 0;
+}
+button {
+	background-color: #007bff;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0069d9;
+}
+
+/* Style for team member images */
+section ul li img {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+/* Style for team member images */
+section ul li img {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for button */
+button#btn-click {
+	background-color: #007bff;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button#btn-click:hover {
+	background-color: #0069d9;
+}
+
+/* Style for click message */
+#click-message {
+	display: none;
+	color: green;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+}

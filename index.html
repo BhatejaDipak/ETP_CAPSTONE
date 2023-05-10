@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Webpage</title>
+    <style>
+      /* Navigation bar styles */
+      nav {
+        background-color: #333;
+        height: 50px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      nav img {
+        height: 40px;
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        border: none;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      
+
+      nav a:hover {
+        background-color: #3e8e41;
+      }
+
+      /* Content styles */
+      .content {
+        height: calc(100vh - 110px);
+        padding: 50px;
+        text-align: center;
+        background-image: url('Homepage.png');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .content h1 {
+        color: #fff;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: white;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="index2.html">About</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="payment.html">Payments</a>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="Database.html">Database page</a>
+      <a href="https://github.com/Aj-45-45/Capstone.git">Github Repo</a>
+    </nav>
+
+    <!-- Content section -->
+    <div class="content">
+      <h1></h1>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>OpenGate Auto Scan</p>
+    </footer>
+  </body>
+</html>

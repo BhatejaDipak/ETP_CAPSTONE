@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="payment_style.css">
+</head>
+
+<body>
+    <h1>Payment Gateway</h1>
+    <form id="payment-form">
+        <label for="vehicle-number">Vehicle Number:</label>
+        <input type="text" id="vehicle-number" required>
+        <br>
+        <label for="toll-plaza">Toll Plaza:</label>
+        <select id="toll-plaza" required>
+            <option value="Select Toll Plaza" selected>Select Toll Plaza Name</option>
+            <option value="Toll Plaza 1">Toll Plaza 1</option>
+            <option value="Toll Plaza 2">Toll Plaza 2</option>
+            <option value="Toll Plaza 3">Toll Plaza 3</option>
+        </select>
+        <br>
+        <label for="mobile-number">Mobile Number:</label>
+        <input type="text" id="mobile-number" required>
+        <br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" required>
+        <br>
+        <label for="card-expiry">Card Expiry:</label>
+        <input type="text" id="card-expiry" required>
+        <br>
+        <label for="card-cvv">Card CVV:</label>
+        <input type="text" id="card-cvv" required>
+        <br>
+        <input type="submit" value="Pay">
+    </form>
+    <button id="back-to-homepage">Back to Homepage</button>
+
+    <script src="payment_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Firebase Authentication</title>
+<link rel="stylesheet" href="cssFile.css">
+</head>
+
+<body>
+  
+<div id="login-box">
+  <div class="left">
+    <h1 id='status'>Sign up</h1>
+    <input type="text" id="username" name="username" placeholder="username" />
+    <input type="text" id="email" name="email" placeholder="E-mail" />
+    <input type="password" id="password" name="password" placeholder="Password" />
+    
+    <input type="submit" id='sighUp' name="signup_submit" value="Sign up" />
+   <a href="index.html"> <input type="submit" id='back-to-homepage' name="back to homepage" value="back" /></a>
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <a href="https://www.facebook.com"><button class="social-signin facebook">Log in with facebook </button></a>
+    <a href="https://www.twitter.com"><button class="social-signin twitter">Log in with Twitter</button></a>
+    <a href="https://accounts.google.com"><button class="social-signin google">Log in with Google</button></a>
+  </div>
+  <div class="or">OR</div>
+</div>
+</body>
+
+<script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+import { getDatabase,set, ref } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyBPJH2xcMxRitU_ZqhLWNswLqy3QVkJq3A",
+authDomain: "open-gate-toll-management.firebaseapp.com",
+databaseURL: "https://open-gate-toll-management-default-rtdb.firebaseio.com",
+projectId: "open-gate-toll-management",
+storageBucket: "open-gate-toll-management.appspot.com",
+messagingSenderId: "851184040830",
+appId: "1:851184040830:web:9d056fc30503793ed5512f",
+measurementId: "G-3F4BLTCJMT"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const auth = getAuth();
+
+
+sighUp.addEventListener('click',(e)=>{
+
+ var email = document.getElementById('email').value;
+ var password = document.getElementById('password').value;
+ var username = document.getElementById('username').value;
+
+ createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+    set(ref(database, 'users/' + user.uid),{
+        username: username,
+        email: email
+    })
+    alert('Account Created Successfully!');
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert('SIGNUP Failed, Please Try Again');
+    // ..
+  });
+})
+</script>
+
+</html>
